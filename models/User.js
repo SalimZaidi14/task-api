@@ -26,3 +26,27 @@ const UserSchema = new schema ({
         minlength: 5
     }
 })
+
+UserSchema.pre('save', async function () {
+    const salt = bcrypt.genSalt(10);
+    this.password = await bcrypt.hash(this.password, salt);
+})
+
+UserSchema.methods.createJWT = function () {
+    return jwt.sign(
+        {
+            userId: this._id, name: this.name,
+        },
+        process.env.JWT_SECRET,
+        {
+            expiresIn: process.env.JWT_LIFETIME,
+        }
+    )
+}
+
+UserSchema.methods.comparePassword = function (candidatePassword) {
+    const isMatch = bcrypt.match(candidatePassword, this.password);
+    return isMatch;
+}
+
+module.exports = mongoose.model('UserSchema', UserSchema);
