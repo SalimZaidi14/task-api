@@ -28,7 +28,7 @@ const UserSchema = new schema ({
 })
 
 UserSchema.pre('save', async function () {
-    const salt = bcrypt.genSalt(10);
+    const salt = await bcrypt.genSalt(10);
     this.password = await bcrypt.hash(this.password, salt);
 })
 
@@ -45,7 +45,7 @@ UserSchema.methods.createJWT = function () {
 }
 
 UserSchema.methods.comparePassword = function (candidatePassword) {
-    const isMatch = bcrypt.match(candidatePassword, this.password);
+    const isMatch = bcrypt.compare(candidatePassword, this.password);
     return isMatch;
 }
 
