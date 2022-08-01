@@ -2,9 +2,9 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const TaskSchema = new Schema({
-        task: {
+        taskName: {
             type: String,
-            required: [true, ['Please provide a task name']],
+            required: [true, 'Please provide a task name'],
         },
         completed: {
             type: Boolean,
@@ -12,8 +12,7 @@ const TaskSchema = new Schema({
         },
         createdBy: {
             type: mongoose.Types.ObjectId,
-            ref: 'User', 
-            required: [true, 'Please provide a user'],
+            ref: 'User',
         }
     },
     {
