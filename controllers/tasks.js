@@ -4,12 +4,12 @@ const { BadRequestError, NotFoundError } = require('../errors')
 
 const getAllTasks = async (req, res) => {
   const task = await taskModel.find({ createdBy: req.user.userId }).sort('createdAt')
-  res.status(StatusCodes.OK).json({ task, count: jobs.length })
+  res.status(StatusCodes.OK).json({ task, count: task.length })
 }
 const getTask = async (req, res) => {
   const {
     user: { userId },
-    params: { id: jobId },
+    params: { id: taskId },
   } = req
 
   const task = await taskModel.findOne({
@@ -30,7 +30,7 @@ const createTask = async (req, res) => {
 
 const updateTask = async (req, res) => {
     const { 
-        body: { taskName, completed }, 
+        body: { taskName }, 
         user: {userId}, 
         params: { id: taskId }
     } = req;

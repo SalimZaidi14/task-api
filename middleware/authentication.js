@@ -4,7 +4,7 @@ const { UnauthenticatedError } = require('../errors');
 
 const auth  = async (req, res, next) => {
     const authHeaders = req.headers.authorization;
-    if (!authHeaders || !authHeaders.beginsWith('Bearer ')) {
+    if (!authHeaders || !authHeaders.startsWith('Bearer ')) {
         throw new UnauthenticatedError('Invalid authorization');
     }
     const token = authHeaders.split(' ')[1]
@@ -16,3 +16,5 @@ const auth  = async (req, res, next) => {
         throw new UnauthenticatedError('Invalid authorization');
     }
 }
+
+module.exports = auth;

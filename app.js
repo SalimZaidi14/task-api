@@ -3,12 +3,13 @@ const express = require('express');
 const app = express();
 const connectDB = require('./db/connect');
 const port = process.env.PORT || 4000;
-const task = require('./routes/task');
-const authRegister = require('./routes/auth-register');
+const taskRouter = require('./routes/task');
+const authRouter = require('./routes/auth-register');
+const authenticationMiddleware = require('./middleware/authentication');
 
 app.use(express.json());
-app.use('/api/v1/tasks', task);
-app.use('/api/v1/signup', authRegister);
+app.use('/api/v1/signup', authRouter);
+app.use('/api/v1/tasks', authenticationMiddleware, taskRouter);
 
 const start = async () => {
     try {
