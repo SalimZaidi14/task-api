@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./index.css" />
+    <title>Tasks</title>
+</head>
+<body>
+    <div class="header">
+        <nav class="nav">
+            <ul class="nav-list">
+                <li class="home"></li>
+                <li class="task"></li>
+                <li class="updates"></li>
+            </ul>
+        </nav>
+    </div>
+    <form class="form">
+        <h3>Task Assistant</h3>
+        <div class="form-control">
+            <input type="text" class="form-input" placeholder="eg. wash dishes" name="name"/>
+            <button type="submit" class="btn submit-btn">submit</button>
+        </div>
+        <div class="form-alert"></div>
+    </form>
+    <section class="task-container">
+        <p class="loading-text">Loading...</p>
+        <div class="tasks"></div>
+    </section>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"
+        integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+    ></script>
+    <script src="./app.js"></script>
+</body>
+</html>
