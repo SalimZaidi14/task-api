@@ -21,9 +21,25 @@
         <h3>Task Assistant</h3>
         <div class="form-control">
             <input type="text" class="form-input" placeholder="eg. wash dishes" name="name"/>
-            <select id="alarm" name="alarmlist" form="alarmform">
-                <option></option>
-            </select>
+            <h2 class="time-text">Time</h2>
+            <div class="form-alarm">
+                <div class="column">
+                    <select>
+                        <option value="Hour" selected disabled hidden>Hour</option>
+                    </select>
+                </div>
+                <div class="column">
+                    <select>
+                        <option value="Minute" selected disabled hidden>Minute</option>
+                    </select>
+                </div>
+                <div class="column">
+                    <select>
+                        <option value="AM/PM" selected disabled hidden>AM/PM</option>
+                    </select>
+                </div>
+                <button id="btn btn-alarm">Set Alarm</button>
+            </div>
             <button type="submit" class="btn submit-btn">submit</button>
         </div>
         <div class="form-alert"></div>
