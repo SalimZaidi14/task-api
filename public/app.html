@@ -9,17 +9,21 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    <div class="header">
+    <div id="header" class="hidden">
         <nav class="nav">
             <ul class="nav-list">
                 <li id="home" class="nav-item">Home</li>
                 <li id="task" class="nav-item">Tasks</li>
                 <li id="updates" class="nav-item">Updates</li>
             </ul>
+            <ul class="login-signup-list">
+                <li id="signup" class="nav-item">SignUp</li>
+                <li id="login" class="nav-item">Login</li>
+            </ul>
         </nav>
     </div>
-    <div class="main">
-        <div class="top">
+    <div id="main">
+        <div id="top" class="hidden">
             <div class="text-div">
                 <h1 class="title">
                     A <span class="solution">Solution</span> for your everyday problems: <span class="solution">Task Assistant</span>
@@ -30,29 +34,24 @@
                 </p>
             </div>
             <div class="image-div">
-                <img src="https://restya.com/wp-content/uploads/2021/05/1_8ygFKYb0Yo6Hc-vnScGA9A.png" class="first-photo" />
+                <img src="https://img.freepik.com/free-vector/hand-drawn-business-planning-with-task-list_23-2149164275.jpg?w=2000" class="first-photo" />
+                <button id="top-button">
+                    <a href="#">
+                        <i class="fa-solid fa-arrow-up"></i>
+                    </a>
+                </button>
             </div>
         </div>
-        <div class="mobile">
-            <div id="phone">
-                <h2 class="phone-title">task assistant</h2>
-                <div class="phone-search-box">
-                    <div id="create-task-box-phone"></div>
-                    <span id="create-task-btn-phone">+</span>
-                </div>
-                <div class="task-phone">wash dishes</div>
-                <div class="task-phone">walk the dog</div>
-                <div class="task-phone">do assignments</div>
-                <div class="task-phone">dust house</div>
-                <div class="more-task-btn">see more tasks</div>
-                <div class="phone-footer">
-                    <i class="fa-solid fa-house"></i>
-                    <i class="fa-solid fa-list-check"></i>
-                    <i class="fa-solid fa-wrench"></i>
-                </div>
-            </div>
+        <div id="mobile" class="hidden">
+            <img src="../iphone2.png" class="iphone-pic" />
             <div id="phone-text">
-                <h1 id="phone-text-heading">Now on <span class="solution">Mobile</span> too</h1>
+                <div id="phone-heading">
+                    <h1 id="phone-text-heading">Now on <span class="solution">Mobile</span> too</h1>
+                    <div class="phone-heading-popups">
+                        <div class="phone-heading-popup-task">Wash Dishes</div>
+                        <div class="phone-heading-popup-task">Water Plants</div>
+                    </div>
+                </div>
                 <p class="description-mobile">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
                     molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
                     numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium
@@ -68,61 +67,53 @@
                     numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium
                     optio, eaque rerum! Pro
                 </p>
+                <div id="appstore-playstore-link">
+                    <a href="#">
+                        <img src="https://lh3.googleusercontent.com/9bfQot7mSCc3GaCZa4BoTL9WWu6gO6bWj7BHyWhbbGjdBOuDw2-jOON8jt13BPV7QEdLrBeKPx559dMLIbupD2UQCOSWsaQpgsEK=rw-s0" id="playstore-img" class="download-img" />
+                    </a>
+                    <a href="#">
+                        <img src="https://lh3.googleusercontent.com/y2EfeX2ZB0MOZD6BJjEFoJ2sddxXtH0n0dhj0WRheoYnw-aXfjI22Fz1N9t_67hgaO74lTzX0dxeZRuamFJcooPZZlbuPo5o7nSjAdU=rw-s0" id="appstore-img" class="download-img" />
+                    </a>
+                </div>
             </div>
         </div>
-        <div class="links">
-            <a class="link" href="instagram.com">
-                <i class="fa-brands fa-instagram"></i>
-            </a>
-            <a class="link" href="microsoft.com">
-                <i class="fab fa-microsoft"></i>
-            </a>
-            <a class="link" href="google.com">
-                <i class="fab fa-google"></i>
-            </a>
-            <a class="link" href="google.com">
-                <i class="fab fa-spotify"></i>
-            </a>
-            <p class="terms"></p>
+        <div id="addition" class="hidden">
+            <h1 id="focus-text-heading">Never lose<span class="solution"> Focus</span>, our guarantee...</h1>
+            <p class="focus-text-para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
+                molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
+                numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium
+                optio, eaque rerum! Pro
+            </p>
+            <p class="focus-text-para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
+                molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
+                numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium
+                optio, eaque rerum! Pro
+            </p>
         </div>
-        <div class="reviews">
-            <div class="review">
-                <p>Jayus Isabella</p>
-                <p>1 week ago</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
-                    molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
-                    numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium
-                    optio, eaque rerum! Pro
-                </p>
-            </div>
-            <div class="review">
-                <p>John Green</p>
-                <p>3 days ago</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
-                    molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
-                    numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium
-                    optio, eaque rerum! Pro</p>
-            </div>
-            <div class="review">
-                <p>Chuck Zoldyck</p>
-                <p>5 days ago</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
-                    molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
-                    numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium
-                    optio, eaque rerum! Pro
-                </p>
-            </div>
+        <div id="addition2" class="hidden">
+            <h1 id="sea-text-heading" class="hidden"><span style="color: black;">Don't get lost </span>in the ocean of tasks</h1>
+            <p class="content flex">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
+                molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
+                numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium
+                optio, eaque rerum! Pro
+            </p>
+            <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+                <defs><path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" /></defs>
+                <g class="parallax">
+                    <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7" />
+                    <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
+                    <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
+                    <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
+                </g>
+            </svg>
         </div>
-        <div class="addition">
-            <h2>Never lose focus</h2>
-            <p>A tool designed for you to be consistent at your work</p>
-            <button class="btn btn-try">
-                <a href="" class="try-link">Try</a>
-            </button>
-            <h2>Easy to use</h2>
-            <p>Task Assistant will act as your personal assistant and is user-friendly beyond expectations</p>
-            <p>It can also be used on any device</p>
+        <div class="content flex">
+            <p class="hidden-text">gggggggggggggg</p>
         </div>
+        <footer>
+
+        </footer>
     </div>
+    <script src="./browser-app.js"></script>
 </body>
 </html>

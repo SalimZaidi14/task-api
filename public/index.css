@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&family=Roboto:wght@300&display=swap');
 
+* {
+    box-sizing: border-box;
+}
+
 :root {
     --ff-primary: 'Oswald', sans-serif;
     --ff-roboto: 'Roboto', sans-serif;
@@ -18,6 +22,7 @@
 html, body {
     margin: 0;
     padding: 0;
+    scroll-behavior: smooth;
 }
 
 .nav-item {
@@ -31,10 +36,16 @@ html, body {
 .nav-list {
     display: flex;
     justify-content: space-evenly;
-    margin-right: 35%;
-    margin-left: 35%;
+    margin-right: 20%;
+    margin-left: 70%;
     list-style: none;
     font-size: var(--fs-h2);
+    /* box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px; */
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    border-radius: 25px;
+    background-image: linear-gradient(to right top, #7002ff, #8900ff, #9e00ff, #b100ff, #c300ff);
+    color: #fff;
+    padding-right: 2rem;
 }
 
 .title {
@@ -50,92 +61,52 @@ html, body {
 
 #description {
     margin-left: 5.5rem;
-    width: 100%;
+    width: 90%;
     font-family: var(--ff-roboto);
     font-size: var(--fs-p);
 }
 
-.top {
+#top {
     display: flex;
+    padding-right: 7rem;
     margin-bottom: 1rem;
 }
 
 .first-photo {
-    width: 60%;
-    margin-left: 15rem;
+    width: 80%;
+    margin-left: 13rem;
+    height: 90%;
 }
 
-#phone {
-    background-color: var(--clr-white);
-    border: 5px solid var(--clr-black);
-    border-top-width: 20px;
-    border-bottom-width: 20px;
-    border-left-width: 7.5px;
-    border-right-width: 7.5px;
-    width: 20%;
-    border-radius: 10px;
-    text-transform: capitalize;
-    padding: 0;
-    font-family: var(--ff-roboto);
-    margin-left: 5rem;
-}
-
-.phone-title {
-    text-align: center;
-    margin-top: 1.5rem;
-}
-
-.phone-search-box {
+#mobile {
+    background-color: #000;
     display: flex;
-    margin-left: 1.3rem;
-    margin-right: 1.3rem;
-    margin-top: 2.5rem;
-    margin-bottom: 2rem;
+    color: #fff;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    justify-content: space-evenly;
 }
 
-#create-task-box-phone {
-    border: 2px solid var(--clr-black);
-    padding: 0.6rem 6rem;
-    border-top-left-radius: 4px;
-    border-bottom-left-radius: 4px;
+.login-signup-list {
+    list-style: none;
+    display: flex;
+    margin-right: 25rem;
 }
 
-#create-task-btn-phone {
-    background-color: var(--clr-purple-blue);
-    color: var(--clr-white);
-    border-top-right-radius: 4px;
-    border-bottom-right-radius: 4px;
-    padding: 0.1rem 0.3rem;
-    text-align: center;
-}
-
-.task-phone {
-    border: 1px solid var(--clr-black);
-    margin-bottom: 1.5rem;
-    margin-right: 1.5rem;
-    margin-left: 1.5rem;
-    text-align: center;
-    padding: 0.3rem 0.3rem
-}
-
-.more-task-btn {
-    background-color: var(--clr-purple-blue);
-    padding: 0.2rem 0.5rem;
-    color: var(--clr-white);
-    margin-right: 2.5rem;
-    margin-left: 2.5rem;
-    text-align: center;
-    border-radius: 4px;
-}
-
-.phone-footer {
-    margin-top: 4rem;
+.nav {
     display: flex;
     justify-content: space-evenly;
-    background-color: var(--clr-purple-blue);
-    color: var(--clr-white);
-    padding-top: 0.35rem;
-    padding-bottom: 0.35rem;
+}
+
+.iphone-pic {
+    height: 90vh;
+    margin-left: 2.5rem;
+}
+
+#phone-text {
+    margin-left: 3.5rem;
+    display: flex;
+    flex-direction:column;
 }
 
 #phone-text-heading {
@@ -144,18 +115,230 @@ html, body {
     font-size: var(--fs-h1);
 }
 
-.mobile {
-    display: flex;
-}
-
-#phone-text {
-    margin-left: 5.5rem;
-}
-
 .description-mobile {
-    width: 9
-    0%;
+    font-family: var(--ff-roboto);
+    width: 90%;}
+#appstore-playstore-link {
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+}
+
+.download-img {
+    width: 10rem;
+}
+
+#our-clients-heading {
+    text-align: center;
+    font-family: var(--ff-primary);
+    font-size: var(--fs-h1);
+    color: var(--clr-black);
+}
+
+#focus-text-heading {
+    text-align: center;
+    width: 100%;
+    font-family: var(--ff-primary);
+    font-size: var(--fs-h1);
+}
+
+.focus-text-para {
+    text-align: center;
     font-family: var(--ff-roboto);
     font-size: var(--fs-p);
-    margin-bottom: 2.5rem;
+    color: var(--clr-black);
+    width: 80%;
+    margin-left: 7rem;
+}
+
+#addition {
+    padding-bottom: 3rem;
+}
+
+#addition2 {
+    position: relative;
+    text-align: center;
+    background-image: linear-gradient(to right top, #7002ff, #8900ff, #9e00ff, #b100ff, #c300ff);
+    color: #fff;
+    padding-top: 1rem;
+}
+
+.inner-header {
+    height: 65vh;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.content {
+    position: relative;
+    text-align: center;
+    font-family: var(--ff-roboto);
+    font-size: var(--fs-p);
+    color: var(--clr-white);
+    width: 80%;
+    margin-left: 7rem;
+}
+
+.flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+}
+
+.waves {
+    position: relative;
+    width: 100%;
+    height: 25vh;
+    margin-bottom: -7px;
+    min-height: 200px;
+    max-height: 200px;
+}
+
+.parallax > use {
+    -webkit-animation: moveForever 25s cubic-bezier(.55, .5, .45, .5) infinite;
+            animation: moveForever 25s cubic-bezier(.55, .5, .45, .5) infinite;
+}
+
+.parallax > use:nth-child(1) {
+    -webkit-animation-delay: -2s;
+            animation-delay: -2s;
+    -webkit-animation-duration: 7s;
+            animation-duration: 7s;
+}
+
+.parallax > use:nth-child(2) {
+    -webkit-animation-delay: -3s;
+            animation-delay: -3s;
+    -webkit-animation-duration: 10s;
+            animation-duration: 10s;
+}
+
+.parallax > use:nth-child(3) {
+    -webkit-animation-delay: -4s;
+            animation-delay: -4s;
+    -webkit-animation-duration: 13s;
+            animation-duration: 13s;
+}
+
+.parallax > use:nth-child(4) {
+    -webkit-animation-delay: -5s;
+            animation-delay: -5s;
+    -webkit-animation-duration: 20s;
+            animation-duration: 20s;
+}
+
+@-webkit-keyframes moveForever {
+    0% {
+        -webkit-transform: translate3d(-90px, 0, 0);
+                transform: translate3d(-90px, 0, 0);
+    }
+    100% {
+        -webkit-transform: translate3d(85px, 0, 0);
+                transform: translate3d(85px, 0, 0);
+    }
+}
+
+@keyframes moveForever {
+    0% {
+        -webkit-transform: translate3d(-90px, 0, 0);
+                transform: translate3d(-90px, 0, 0);
+    }
+    100% {
+        -webkit-transform: translate3d(85px, 0, 0);
+                transform: translate3d(85px, 0, 0);
+    }
+}
+
+#sea-text-heading {
+    text-align: center;
+    width: 100%;
+    font-family: var(--ff-primary);
+    font-size: var(--fs-h1);
+}
+
+.hidden-text {
+    color: var(--clr-white);
+}
+
+#phone-heading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.phone-heading-popups {
+    display: flex;
+    margin-right: 3rem;
+}
+
+.phone-heading-popups:nth-child(2) {
+    margin-left: 2rem;
+}
+
+.phone-heading-popup-task {
+    text-align: center;
+    border: 3px solid #fff;
+    margin: 1rem;
+    padding: 0.1rem 1.5rem;
+    font-family: var(--ff-primary);
+    border-radius: 10px;
+    animation: bounce 3s linear infinite;
+}
+
+@keyframes bounce {
+    0% {
+        display: block;
+    }
+
+    20%, 50%, 80%, to {
+        transform: translateY(0);
+    }
+
+    40% {
+        transform: translateY(-30px);
+    }
+
+    70% {
+        transform: translateY(-15px);
+    }
+
+    90% {
+        transform: translateY(-9px);
+    }
+
+    100% {
+        display: none;
+    }
+}
+
+.image-div {
+    display: flex;
+    flex-direction:column;
+}
+
+#top-button {
+    background-color: #ffffff;
+    height: 3rem;
+    width: 3rem;
+    font-size: 1rem;
+    /* transform: translateX(1500%); */
+    border-radius: 50%;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    border: none;
+    color: #000;
+    display: none;
+    float: right;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
 }
